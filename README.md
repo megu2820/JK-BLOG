@@ -68,7 +68,7 @@ cd blog-frontend && npm install
 * **Backend:**
     * Set up environment variables for database connection, Google/Facebook authentication credentials, and JWT secret.
 * **Frontend:**
-    * Configure the backend API URL and Google/Facebook app IDs.
+    * Configure the backend API URL.
 
 ### Environment Variables Create a .env file in both api and client folders with the following details:
 Backend .env 
