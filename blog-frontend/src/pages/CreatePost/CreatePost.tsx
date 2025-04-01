@@ -9,12 +9,14 @@ const CreatePost = () => {
   const [message, setMessage] = useState<string | null>(null);
   const navigate = useNavigate();
 
+  const backendUrl = process.env.REACT_APP_BACKEND_URL;
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
       const token = localStorage.getItem("token");
       await axios.post(
-        "http://localhost:5000/posts",
+        `${backendUrl}/posts`,
         { title, body },
         { headers: { Authorization: `Bearer ${token}` } }
       );

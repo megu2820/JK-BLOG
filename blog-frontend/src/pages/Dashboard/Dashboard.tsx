@@ -8,6 +8,8 @@ const Dashboard = () => {
   const [posts, setPosts] = useState<Post[]>([]);
   const navigate = useNavigate();
 
+  const backendUrl = process.env.REACT_APP_BACKEND_URL;
+
   useEffect(() => {
 
     const params = new URLSearchParams(window.location.search);
@@ -28,7 +30,7 @@ const Dashboard = () => {
 
     const fetchPosts = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/posts", {
+        const response = await axios.get( `${backendUrl}/posts`, {
           headers: { Authorization: `Bearer ${token}` },
         });
         setPosts(response.data);

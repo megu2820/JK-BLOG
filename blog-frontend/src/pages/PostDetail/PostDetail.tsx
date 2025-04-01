@@ -7,12 +7,12 @@ const PostDetail = () => {
   const { id } = useParams();
   const navigate = useNavigate();
   const [post, setPost] = useState<any>(null);
-
+  const backendUrl = process.env.REACT_APP_BACKEND_URL;
   useEffect(() => {
     const fetchPost = async () => {
       try {
         const token = localStorage.getItem("token");
-        const response = await axios.get(`http://localhost:5000/posts/${id}`, {
+        const response = await axios.get(`${backendUrl}/posts/${id}`, {
           headers: { Authorization: `Bearer ${token}` },
         });
         setPost(response.data);

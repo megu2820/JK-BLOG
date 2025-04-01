@@ -6,9 +6,12 @@ import "./LoginPage.css";
 const LoginPage = () => {
   const navigate = useNavigate();
 
+  const backendUrl = process.env.REACT_APP_BACKEND_URL;
+
   const handleLogin = (provider: "google" | "facebook") => {
-    window.location.href = `http://localhost:5000/auth/${provider}`;
+    window.location.href = `${backendUrl}/auth/${provider}`;
   };
+
 
   useEffect(() => {
     const token = localStorage.getItem("token");
