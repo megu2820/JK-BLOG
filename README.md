@@ -59,7 +59,7 @@ This project is a simple blog application built with NestJS for the backend and 
 
 ### Installation
 
-git clone https://github.com/yashrajverma/jktech-assignment.git
+git clone https://github.com/megu2820/JK-BLOG.git
 cd jk-blog
 cd blog-backend && npm install
 cd blog-frontend && npm install
@@ -107,7 +107,7 @@ npm run dev
 
 2.  Run frontend tests:
 
-   cd blog-backend
+   cd blog-frontend
    npm run test
 
 ### Google OAuth
